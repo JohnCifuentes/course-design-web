@@ -1,0 +1,171 @@
+:root{
+    --size-header-footer: 70px;
+    --columns-nav: 3;
+    --size-main: 210px;
+}
+
+@keyframes moveAside1 {
+    10%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside2 {
+    10%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside3 {
+    10%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside4 {
+    10%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside5 {
+    10%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside6 {
+    10%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+@keyframes moveAside7 {
+    10%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.5);
+    }
+    from{
+        transform: scale(1);
+    }
+}
+
+.grid-container-aside{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--size-main));
+    grid-gap: 1em 1em;
+}
+
+.grid-item-aside{
+    padding: 3em;
+    justify-self: center;
+    align-self: center;
+    max-width: var(--size-main);
+}
+
+.grid-item-aside:first-child img{
+    animation-name: moveAside1;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:nth-child(2) img{
+    animation-name: moveAside2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:nth-child(3) img{
+    animation-name: moveAside3;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:nth-child(4) img{
+    animation-name: moveAside4;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:nth-child(5) img{
+    animation-name: moveAside5;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:nth-child(6) img{
+    animation-name: moveAside6;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside:last-child img{
+    animation-name: moveAside7;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.grid-item-aside img{
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (width > 1560px) {
+    .grid-container-aside{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em 1em;
+    }
+    .grid-item-aside{
+        padding: 10em;
+        justify-self: center;
+        align-self: center;
+        max-width: var(--size-main);
+    }
+}
